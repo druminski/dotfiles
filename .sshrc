@@ -1,0 +1,6 @@
+echo welcome
+alias ..='cd ..'
+alias h='hostname -f'
+
+export PS1="\[\e[0;34m\]\u@`hostname -f`:~$ \[\e[0m\]"
+
