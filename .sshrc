@@ -4,3 +4,5 @@ alias h='hostname -f'
 
 export PS1="\[\e[0;34m\]\u@`hostname -f`:~$ \[\e[0m\]"
 
+function threadDump () { PROCESS_PID=$(jps | grep AlleHermes | awk 'NR==1{print $1}') && jstack -l $PROCESS_PID; }
+export -f threadDump
