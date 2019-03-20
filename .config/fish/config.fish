@@ -4,3 +4,6 @@ set -g theme_display_user yes
 set -g theme_display_hostname ssh
 
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
+
+thefuck --alias | source
+alias f="fuck"
