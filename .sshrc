@@ -2,15 +2,9 @@ alias ..='cd ..'
 alias h='hostname -f'
 
 source "$SSHHOME/.sshrc.d/colors.bash"
-source "$SSHHOME/.sshrc.d/cpu_mem.bash"
 
 #export PS1="\[\e[0;34m\]\u@`hostname -f`:~$ \[\e[0m\]"
 
 export PS1="${CYAN}\u${RESET}@${GREEN}\`hostname -f\`${RESET}[\t]\n${LIGHT_RED}$ ${RESET}"
 
-function threadDump () { PROCESS_PID=$(jps | grep AlleHermes | awk 'NR==1{print $1}') && jstack -l $PROCESS_PID; }
-export -f threadDump
-
-echo welcome
-
-
+source "$SSHHOME/.sshrc.d/alle-sshrc/main.sh"
