@@ -18,3 +18,5 @@
     br = branch
     ci = commit
     st = status
+
+    resetHard = reset --hard origin/master
